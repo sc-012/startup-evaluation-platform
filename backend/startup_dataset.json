@@ -1,0 +1,65 @@
+[
+  {
+    "name": "We360.ai",
+    "sector": "SaaS/Productivity",
+    "stage": "Pre-Series A",
+    "arr_crore": 6.8,
+    "team_size": 33,
+    "mrr_lakh": 55.0,
+    "retention": 96,
+    "gross_margin": 90,
+    "growth_rate": 66,
+    "funding_raised_crore": 8.3,
+    "investment_score": 88,
+    "risk_level": "Low"
+  },
+  {
+    "name": "Dr. Doodley",
+    "sector": "HealthTech/Pet Care",
+    "stage": "Seed",
+    "arr_crore": null,
+    "team_size": 40,
+    "revenue_6m": 1.65,
+    "funding_raised_crore": 1.9,
+    "doctors": 12,
+    "pets_treated": 2050,
+    "investment_score": 58,
+    "risk_level": "Medium"
+  },
+  {
+    "name": "InLustro",
+    "sector": "EdTech/HR Tech",
+    "stage": "Seed",
+    "arr_crore": 0.25,
+    "team_size": 40,
+    "students_empowered": 530000,
+    "institutions": 8000,
+    "projected_arr_18m": 3.0,
+    "investment_score": 48,
+    "risk_level": "Medium"
+  },
+  {
+    "name": "Cashvisory",
+    "sector": "FinTech",
+    "stage": "Pre-Seed",
+    "arr_crore": 0.0,
+    "team_size": 5,
+    "users_acquired": 13000,
+    "total_aum": 12.8,
+    "valuation_pre_money_crore": 8.0,
+    "funding_raised_crore": 1.2,
+    "investment_score": 42,
+    "risk_level": "Medium-High"
+  },
+  {
+    "name": "Naario",
+    "sector": "Food Tech/Consumer Goods",
+    "stage": "Pre-Seed",
+    "team_size": 10,
+    "projected_revenue_fy26": 6.0,
+    "women_distributors": 200,
+    "fpo_partnerships": 25,
+    "investment_score": 35,
+    "risk_level": "Medium-High"
+  }
+]

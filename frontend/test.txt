@@ -1,0 +1,6 @@
+Test PDF content for startup evaluation
+Company: Test Startup Inc.
+Sector: Technology
+Revenue: echo "Test PDF content for startup evaluation" > test.txt && echo "Company: Test Startup Inc." >> test.txt && echo "Sector: Technology" >> test.txt && echo "Revenue: $1M ARR" >> test.txt && echo "Team: 10 employees" >> test.txt && echo "Stage: Series A" >> test.txtM ARR
+Team: 10 employees
+Stage: Series A

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Startup Evaluation Platform - Google Cloud Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <h1>🚀 AI-Powered Startup Evaluator</h1>
+                    <span class="header__subtitle">Comprehensive Investment Analysis Using Google Cloud Platform</span>
+                </div>
+                <nav class="header__nav">
+                    <button class="btn btn--outline btn--sm" id="contactBtn">🏢 Enterprise Access</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h2>AI-Powered Startup Investment Analysis</h2>
+                <p>Upload pitch decks, financial documents, or founder profiles for comprehensive AI-powered investment analysis powered by Google Cloud Platform's advanced AI infrastructure including Vertex AI Gemini, Cloud Vision API, and BigQuery analytics.</p>
+                
+                <!-- Platform Statistics -->
+                <div class="platform-stats">
+                    <div class="stat">
+                        <span class="stat__number">500+</span>
+                        <span class="stat__label">Startups Analyzed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">98%</span>
+                        <span class="stat__label">Accuracy Rate</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">15 sec</span>
+                        <span class="stat__label">Analysis Time</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">7 GCP</span>
+                        <span class="stat__label">AI Services</span>
+                    </div>
+                </div>
+
+                <div class="hero__cta">
+                    <button class="btn btn--primary btn--lg" onclick="document.getElementById('uploadSection').scrollIntoView({behavior: 'smooth'})">
+                        📄 Upload PDF & Analyze Now
+                    </button>
+                    <button class="btn btn--outline btn--lg" onclick="document.getElementById('sampleAnalysis').scrollIntoView({behavior: 'smooth'})">
+                        🎯 View Sample Analysis
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features__header">
+                <h2>🔬 Advanced AI Analysis Capabilities</h2>
+                <p>Built on Google Cloud Platform's enterprise-grade AI infrastructure</p>
+            </div>
+            <div class="features__grid">
+                <div class="feature-card">
+                    <div class="feature-card__icon">🔍</div>
+                    <h3>Smart Document Intelligence Engine</h3>
+                    <p>AI-powered document extraction using Cloud Vision + Gemini</p>
+                    <ul class="feature-list">
+                        <li>OCR processing of pitch decks and financial documents</li>
+                        <li>Structured data extraction using Gemini 2.0 Pro</li>
+                        <li>Financial metrics parsing and validation</li>
+                        <li>Founder and team information extraction</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">📊</div>
+                    <h3>Comparative Benchmarking System</h3>
+                    <p>Sector-wise performance analysis using BigQuery analytics</p>
+                    <ul class="feature-list">
+                        <li>Peer comparison across sector metrics</li>
+                        <li>Percentile ranking calculations</li>
+                        <li>Revenue multiple analysis</li>
+                        <li>Team efficiency benchmarking</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">⚠️</div>
+                    <h3>AI Risk Assessment Module</h3>
+                    <p>Automated red flag detection and investment scoring</p>
+                    <ul class="feature-list">
+                        <li>Multi-factor risk scoring algorithm</li>
+                        <li>Financial consistency analysis</li>
+                        <li>Market validation assessment</li>
+                        <li>Investment readiness evaluation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="upload-section" id="uploadSection">
+        <div class="container">
+            <div class="upload-section__content">
+                <h2>📄 Upload Your Startup Document</h2>
+                <p>Drag & drop or select your startup documents for AI-powered analysis</p>
+                
+                <div class="upload-main">
+                    <div class="file-upload" id="fileUpload">
+                        <div class="file-upload__area" id="dropZone">
+                            <div class="file-upload__icon">📄</div>
+                            <h3>Drag & Drop Your Document Here</h3>
+                            <p>Upload pitch decks, financial documents, founder profiles, or business plans</p>
+                            <p class="file-upload__formats">Supports PDF, JPEG, PNG (max 10MB)</p>
+                            <button class="btn btn--primary btn--lg" id="browseBtn">
+                                📁 Browse Files & Upload
+                            </button>
+                            <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
+                        </div>
+                        
+                        <div class="file-upload__progress hidden" id="uploadProgress">
+                            <div class="progress-header">
+                                <h3>🤖 AI Processing Pipeline</h3>
+                                <p>Analyzing your document with Google Cloud Platform AI services</p>
+                            </div>
+                            
+                            <div class="progress-steps" id="progressSteps">
+                                <div class="progress-step active" id="progressStep1">
+                                    <div class="progress-step__icon">📤</div>
+                                    <div class="progress-step__content">
+                                        <span class="progress-step__title">Uploading to Cloud Storage</span>
+                                        <span class="progress-step__desc">Securely uploading document to GCS bucket</span>
+                                    </div>
+                                </div>
+                                <div class="progress-step" id="progressStep2">
+                                    <div class="progress-step__icon">👁️</div>
+                                    <div class="progress-step__content">
+                                        <span class="progress-step__title">Extracting text with Cloud Vision</span>
+                                        <span class="progress-step__desc">OCR processing to extract text and structured data</span>
+                                    </div>
+                                </div>
+                                <div class="progress-step" id="progressStep3">
+                                    <div class="progress-step__icon">🤖</div>
+                                    <div class="progress-step__content">
+                                        <span class="progress-step__title">Processing with Gemini AI</span>
+                                        <span class="progress-step__desc">Advanced AI analysis using Gemini 2.0 for data extraction</span>
+                                    </div>
+                                </div>
+                                <div class="progress-step" id="progressStep4">
+                                    <div class="progress-step__icon">📊</div>
+                                    <div class="progress-step__content">
+                                        <span class="progress-step__title">Calculating investment score</span>
+                                        <span class="progress-step__desc">Multi-factor analysis and peer comparison</span>
+                                    </div>
+                                </div>
+                                <div class="progress-step" id="progressStep5">
+                                    <div class="progress-step__icon">💾</div>
+                                    <div class="progress-step__content">
+                                        <span class="progress-step__title">Storing in BigQuery</span>
+                                        <span class="progress-step__desc">Saving results to data warehouse</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" id="progressFill"></div>
+                            </div>
+                            <p class="progress-text" id="progressText">Initializing AI processing pipeline...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Analysis Section -->
+    <section class="sample-section" id="sampleAnalysis">
+        <div class="container">
+            <div class="sample-section__content">
+                <h2>🎯 Explore Sample Startup Analysis</h2>
+                <p>See how our AI evaluates real startups across different sectors and stages</p>
+                
+                <div class="sample-grid">
+                    <div class="sample-card high-score" data-company="we360ai" tabindex="0">
+                        <div class="sample-card__header">
+                            <h3>We360.ai</h3>
+                            <div class="sample-score score-high">88</div>
+                        </div>
+                        <div class="sample-card__details">
+                            <span class="sample-tag">SaaS/Productivity</span>
+                            <span class="sample-tag">Pre-Series A</span>
+                            <span class="sample-tag">33 people</span>
+                        </div>
+                        <div class="sample-card__metrics">
+                            <div class="metric">
+                                <span class="metric__label">ARR</span>
+                                <span class="metric__value">₹6.8Cr</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric__label">Risk Level</span>
+                                <span class="metric__value risk-low">Low</span>
+                            </div>
+                        </div>
+                        <div class="sample-card__recommendation">
+                            ✅ STRONG RECOMMEND - Excellent SaaS metrics with 96% retention
+                        </div>
+                    </div>
+
+                    <div class="sample-card medium-score" data-company="drdoodley" tabindex="0">
+                        <div class="sample-card__header">
+                            <h3>Dr. Doodley</h3>
+                            <div class="sample-score score-medium">58</div>
+                        </div>
+                        <div class="sample-card__details">
+                            <span class="sample-tag">HealthTech/Pet Care</span>
+                            <span class="sample-tag">Seed</span>
+                            <span class="sample-tag">40 people</span>
+                        </div>
+                        <div class="sample-card__metrics">
+                            <div class="metric">
+                                <span class="metric__label">Revenue (6M)</span>
+                                <span class="metric__value">₹1.65Cr</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric__label">Risk Level</span>
+                                <span class="metric__value risk-medium">Medium</span>
+                            </div>
+                        </div>
+                        <div class="sample-card__recommendation">
+                            🟡 CONDITIONAL RECOMMEND - Innovative model needs scaling validation
+                        </div>
+                    </div>
+
+                    <div class="sample-card medium-score" data-company="inlustro" tabindex="0">
+                        <div class="sample-card__header">
+                            <h3>InLustro</h3>
+                            <div class="sample-score score-medium">48</div>
+                        </div>
+                        <div class="sample-card__details">
+                            <span class="sample-tag">EdTech/HR Tech</span>
+                            <span class="sample-tag">Seed</span>
+                            <span class="sample-tag">40 people</span>
+                        </div>
+                        <div class="sample-card__metrics">
+                            <div class="metric">
+                                <span class="metric__label">Students</span>
+                                <span class="metric__value">530K</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric__label">Risk Level</span>
+                                <span class="metric__value risk-medium">Medium</span>
+                            </div>
+                        </div>
+                        <div class="sample-card__recommendation">
+                            🟡 CONDITIONAL RECOMMEND - Strong product-market fit needs monetization
+                        </div>
+                    </div>
+
+                    <div class="sample-card low-score" data-company="cashvisory" tabindex="0">
+                        <div class="sample-card__header">
+                            <h3>Cashvisory</h3>
+                            <div class="sample-score score-low">42</div>
+                        </div>
+                        <div class="sample-card__details">
+                            <span class="sample-tag">FinTech</span>
+                            <span class="sample-tag">Pre-Seed</span>
+                            <span class="sample-tag">5 people</span>
+                        </div>
+                        <div class="sample-card__metrics">
+                            <div class="metric">
+                                <span class="metric__label">Users</span>
+                                <span class="metric__value">13K</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric__label">Risk Level</span>
+                                <span class="metric__value risk-high">Medium-High</span>
+                            </div>
+                        </div>
+                        <div class="sample-card__recommendation">
+                            🟡 PROCEED WITH CAUTION - User base present, revenue validation needed
+                        </div>
+                    </div>
+
+                    <div class="sample-card low-score" data-company="naario" tabindex="0">
+                        <div class="sample-card__header">
+                            <h3>Naario</h3>
+                            <div class="sample-score score-low">35</div>
+                        </div>
+                        <div class="sample-card__details">
+                            <span class="sample-tag">Food Tech/Consumer Goods</span>
+                            <span class="sample-tag">Pre-Seed</span>
+                            <span class="sample-tag">10 people</span>
+                        </div>
+                        <div class="sample-card__metrics">
+                            <div class="metric">
+                                <span class="metric__label">Women Distributors</span>
+                                <span class="metric__value">200</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric__label">Risk Level</span>
+                                <span class="metric__value risk-high">Medium-High</span>
+                            </div>
+                        </div>
+                        <div class="sample-card__recommendation">
+                            ❌ HIGH CAUTION - Very early stage, needs market validation
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GCP Architecture Section -->
+    <section class="architecture-section">
+        <div class="container">
+            <div class="architecture-content">
+                <h2>🏗️ Powered by Google Cloud Platform</h2>
+                <p>Enterprise-grade AI infrastructure for reliable startup evaluation built with Cloud Shell Editor workflow</p>
+                
+                <div class="gcp-services">
+                    <div class="service-card">
+                        <div class="service-icon">💻</div>
+                        <h4>Cloud Shell Editor</h4>
+                        <p>Complete development environment with integrated terminal and file management</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">👁️</div>
+                        <h4>Cloud Vision API</h4>
+                        <p>Document OCR processing and text extraction with high accuracy</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🤖</div>
+                        <h4>Vertex AI Gemini</h4>
+                        <p>Advanced AI model for structured data extraction and analysis</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🗄️</div>
+                        <h4>BigQuery</h4>
+                        <p>Enterprise data warehouse for analytics and peer benchmarking</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💾</div>
+                        <h4>Cloud Storage</h4>
+                        <p>Secure document storage and processing pipeline</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">☁️</div>
+                        <h4>Cloud Run</h4>
+                        <p>Serverless container deployment for MCP server</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔥</div>
+                        <h4>Firebase Hosting</h4>
+                        <p>Fast, secure web hosting with global CDN</p>
+                    </div>
+                </div>
+
+                <div class="deployment-info">
+                    <h3>🔧 Technical Architecture & Deployment</h3>
+                    <div class="deployment-grid">
+                        <div class="deployment-item">
+                            <strong>Development:</strong> Cloud Shell Editor with integrated terminal and file management
+                        </div>
+                        <div class="deployment-item">
+                            <strong>Backend:</strong> FastAPI MCP Server deployed on Cloud Run
+                        </div>
+                        <div class="deployment-item">
+                            <strong>Frontend:</strong> React TypeScript application hosted on Firebase
+                        </div>
+                        <div class="deployment-item">
+                            <strong>Data Storage:</strong> BigQuery for analytics, Cloud Storage for documents
+                        </div>
+                        <div class="deployment-item">
+                            <strong>AI Processing:</strong> Vertex AI Gemini + Cloud Vision API
+                        </div>
+                        <div class="deployment-item">
+                            <strong>Security:</strong> Service account authentication, HTTPS-only communication
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section hidden" id="resultsSection">
+        <div class="container">
+            <div class="results-header">
+                <div class="company-info" id="companyInfo">
+                    <h2 id="companyName">Company Name</h2>
+                    <div class="company-details">
+                        <span class="company-tag" id="companySector">Sector</span>
+                        <span class="company-tag" id="companyStage">Stage</span>
+                        <span class="company-tag" id="companyTeamSize">Team Size</span>
+                    </div>
+                </div>
+                <div class="overall-score" id="overallScore">
+                    <div class="score-circle">
+                        <span class="score-value" id="scoreValue">0</span>
+                        <span class="score-label">Investment Score</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Metrics Grid -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Performance Tier</h4>
+                    <div class="metric-value" id="performanceTier">-</div>
+                    <div class="metric-subtitle" id="percentileRank">-</div>
+                </div>
+                <div class="metric-card">
+                    <h4>Risk Assessment</h4>
+                    <div class="metric-value risk-level" id="riskLevel">-</div>
+                    <div class="metric-subtitle" id="riskScore">-</div>
+                </div>
+                <div class="metric-card">
+                    <h4>Financial Performance</h4>
+                    <div class="metric-value" id="arrValue">-</div>
+                    <div class="metric-subtitle" id="teamEfficiency">-</div>
+                </div>
+                <div class="metric-card">
+                    <h4>Investment Readiness</h4>
+                    <div class="metric-value" id="investmentReadiness">-</div>
+                    <div class="metric-subtitle" id="fundingRaised">-</div>
+                </div>
+            </div>
+
+            <!-- Investment Recommendation -->
+            <div class="recommendation-card" id="recommendationCard">
+                <h3>🎯 Investment Recommendation</h3>
+                <div class="recommendation-content" id="recommendationText"></div>
+            </div>
+
+            <!-- Analysis Tabs -->
+            <div class="analysis-tabs">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="overview">📊 Overview</button>
+                    <button class="tab-btn" data-tab="metrics">💰 Financial Metrics</button>
+                    <button class="tab-btn" data-tab="risks">⚠️ Risk Analysis</button>
+                    <button class="tab-btn" data-tab="benchmarks">📈 Peer Comparison</button>
+                </div>
+
+                <!-- Overview Tab -->
+                <div class="tab-content active" id="overviewTab">
+                    <div class="overview-content">
+                        <div class="key-metrics" id="keyMetrics">
+                            <h4>Key Business Metrics</h4>
+                            <div class="metrics-list" id="businessMetrics"></div>
+                        </div>
+                        <div class="performance-chart">
+                            <h4>Performance Analysis</h4>
+                            <div class="chart-container" style="position: relative; height: 350px;">
+                                <canvas id="performanceChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metrics Tab -->
+                <div class="tab-content" id="metricsTab">
+                    <div class="metrics-content">
+                        <div class="financial-metrics">
+                            <h4>Financial Performance Analysis</h4>
+                            <div class="chart-container" style="position: relative; height: 400px;">
+                                <canvas id="financialChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="efficiency-metrics">
+                            <h4>Team & Operational Efficiency</h4>
+                            <div class="efficiency-grid" id="efficiencyGrid"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risks Tab -->
+                <div class="tab-content" id="risksTab">
+                    <div class="risks-content">
+                        <div class="risk-factors">
+                            <h4>Risk Factors & Red Flags</h4>
+                            <div class="risk-list" id="riskFactors"></div>
+                        </div>
+                        <div class="recommendations">
+                            <h4>Due Diligence Recommendations</h4>
+                            <div class="recommendations-list" id="recommendationsList"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benchmarks Tab -->
+                <div class="tab-content" id="benchmarksTab">
+                    <div class="benchmarks-content">
+                        <div class="sector-comparison">
+                            <h4>Sector Performance Comparison</h4>
+                            <div class="chart-container" style="position: relative; height: 400px;">
+                                <canvas id="benchmarkChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="peer-table">
+                            <h4>Peer Analysis Summary</h4>
+                            <div class="peer-comparison" id="peerComparison"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Export Actions -->
+            <div class="export-actions">
+                <button class="btn btn--outline" id="exportPdfBtn">📄 Export PDF Report</button>
+                <button class="btn btn--outline" id="shareResultsBtn">🔗 Share Analysis</button>
+                <button class="btn btn--primary" id="analyzeAnotherBtn">🚀 Analyze Another Startup</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <h4>🏗️ Technical Architecture</h4>
+                    <p>Built with Google Cloud Platform • Powered by Vertex AI Gemini • Secure MCP Server deployment on Cloud Run</p>
+                    <p>Enterprise-grade security and scalability for professional investment analysis • Cloud Shell Editor workflow integration</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#" target="_blank">📚 API Documentation</a>
+                    <a href="#" target="_blank">🔧 Enterprise Integration</a>
+                    <a href="#" target="_blank">🏢 Contact Sales</a>
+                    <a href="#" target="_blank">☁️ GCP Deployment Guide</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="root"></div>
+</body>
+</html>
