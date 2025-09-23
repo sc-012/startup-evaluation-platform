@@ -1,6 +1,7 @@
 # AI-Powered Startup Evaluation Platform
 
 A comprehensive AI-powered startup evaluation platform built on Google Cloud Platform that analyzes startup documents and generates investment insights.
+Check the prototype here: [https://startup-evaluator-frontend-166437193095.asia-south1.run.app/](https://startup-evaluator-frontend-166437193095.asia-south1.run.app/)
 
 ## Features
 
@@ -41,11 +42,9 @@ A comprehensive AI-powered startup evaluation platform built on Google Cloud Pla
 ./quick-deploy.sh
 ```
 
-### Manual Deployment
-Follow the detailed guide in `GITHUB_DEPLOYMENT_GUIDE.md`
+
 
 ## Project Structure
-
 ```
 startup-evaluator/
 ├── backend/
@@ -100,30 +99,14 @@ startup-evaluator/
 ## Access URLs
 
 After deployment:
-- **Frontend**: `https://startup-evaluator-frontend-166437193095.asia-south1.run.app/`
-- **Backend API**: `https://startup-evaluator-backend-166437193095.asia-south1.run.app/`
-- **API Documentation**: `https://startup-evaluator-backend-166437193095.asia-south1.run.app/docs`
-- **Health Check**: `https://startup-evaluator-backend-166437193095.asia-south1.run.app/health`
-
-## Management Commands
-
-```bash
-# View logs
-gcloud run services logs tail startup-evaluator-backend --region=us-central1
-
-# Update deployment
-gcloud run services update startup-evaluator-backend --region=us-central1
-
-# Scale service
-gcloud run services update startup-evaluator-backend \
-    --region=us-central1 \
-    --min-instances=1 \
-    --max-instances=10
-```
+- **Frontend**: [https://startup-evaluator-frontend-166437193095.asia-south1.run.app/](https://startup-evaluator-frontend-166437193095.asia-south1.run.app/)
+- **Backend API**: [https://startup-evaluator-backend-166437193095.asia-south1.run.app/](https://startup-evaluator-backend-166437193095.asia-south1.run.app/)
+- **API Documentation**: [https://startup-evaluator-backend-166437193095.asia-south1.run.app/docs](https://startup-evaluator-backend-166437193095.asia-south1.run.app/docs)
+- **Health Check**: [https://startup-evaluator-backend-166437193095.asia-south1.run.app/health](https://startup-evaluator-backend-166437193095.asia-south1.run.app/health)
 
 ## Security
 
-- **Environment Variables**: NO hardcoded values in backend code
+- **Environment Variables**: No hardcoded values in backend code
 - **Service Account Authentication**: Least-privilege access patterns
 - **HTTPS-only Communication**: Secure data transmission
 - **Input Validation**: File type and size restrictions
@@ -136,14 +119,6 @@ gcloud run services update startup-evaluator-backend \
 - **File Support**: PDF, JPEG, PNG up to 10MB
 - **Concurrent Users**: Up to 10 simultaneous evaluations
 - **Response Time**: <5 seconds for API calls
-
-## Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
 
 ## License
 
