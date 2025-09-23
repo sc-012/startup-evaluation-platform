@@ -1,25 +1,25 @@
-# 🚀 AI-Powered Startup Evaluation Platform
+# AI-Powered Startup Evaluation Platform
 
 A comprehensive AI-powered startup evaluation platform built on Google Cloud Platform that analyzes startup documents and generates investment insights.
 
-## 🎯 Features
+## Features
 
-### 🔍 Smart Document Intelligence Engine
+### Smart Document Intelligence Engine
 - **Cloud Vision OCR**: Extract text from pitch decks, financial documents
 - **Gemini 2.0 Pro**: AI-powered structured data extraction and validation
 - **Multi-format Support**: PDF, JPEG, PNG documents up to 10MB
 
-### 📊 Comparative Benchmarking System  
+### Comparative Benchmarking System  
 - **BigQuery Analytics**: Sector-wise peer comparison and performance metrics
 - **Percentile Ranking**: Performance tier classification against industry peers
 - **Efficiency Analysis**: Team productivity and revenue multiple calculations
 
-### ⚠️ AI Risk Assessment Module
+### AI Risk Assessment Module
 - **Multi-factor Analysis**: Financial, market, team, competitive, and growth risks
 - **Red Flag Detection**: Automated identification of investment concerns
 - **Investment Recommendations**: AI-generated decision support with rationale
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐ ┌──────────────────┐ ┌─────────────────┐
@@ -28,7 +28,7 @@ A comprehensive AI-powered startup evaluation platform built on Google Cloud Pla
 └─────────────────┘ └──────────────────┘ └─────────────────┘
 ```
 
-## 🚀 Quick Deployment
+## Quick Deployment
 
 ### Prerequisites
 - Google Cloud Project with billing enabled
@@ -44,7 +44,7 @@ A comprehensive AI-powered startup evaluation platform built on Google Cloud Pla
 ### Manual Deployment
 Follow the detailed guide in `GITHUB_DEPLOYMENT_GUIDE.md`
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 startup-evaluator/
@@ -73,7 +73,7 @@ startup-evaluator/
 └── README.md
 ```
 
-## 🔧 Tech Stack
+## Tech Stack
 
 - **Frontend**: React 18 + TypeScript + CSS3
 - **Backend**: Python 3.11 + FastAPI + Uvicorn
@@ -83,40 +83,29 @@ startup-evaluator/
 - **Deployment**: Cloud Run + Firebase Hosting
 - **CI/CD**: Cloud Build + GitHub Actions
 
-## 📊 Usage
+## Usage
 
 ### PDF Upload & Analysis
 1. Navigate to the deployed frontend URL
 2. **Upload Document**: Click "Upload PDF" or drag-and-drop files
 3. **AI Processing**: Real-time pipeline with 5 processing steps:
-   - 📤 Upload to Cloud Storage
-   - 👁️ OCR with Cloud Vision
-   - 🤖 Data extraction with Gemini
-   - 📊 Investment scoring
-   - 💾 Storage in BigQuery
+   - Upload to Cloud Storage
+   - OCR with Cloud Vision
+   - Data extraction with Gemini
+   - Investment scoring
+   - Storage in BigQuery
 4. **Results Dashboard**: Comprehensive evaluation with metrics and recommendations
 
-### API Usage
-```bash
-# Upload and analyze startup document
-curl -X POST "https://your-mcp-server/evaluate" \
-  -H "Authorization: Bearer your-token" \
-  -F "file=@startup_pitch_deck.pdf"
 
-# Retrieve analysis results
-curl "https://your-mcp-server/startup/{startup_id}" \
-  -H "Authorization: Bearer your-token"
-```
-
-## 🔗 Access URLs
+## Access URLs
 
 After deployment:
-- **Frontend**: `https://your-project-id.web.app`
-- **Backend API**: `https://startup-evaluator-backend-xxxxx.uc.r.appspot.com`
-- **API Documentation**: `https://your-backend-url/docs`
-- **Health Check**: `https://your-backend-url/health`
+- **Frontend**: `https://startup-evaluator-frontend-166437193095.asia-south1.run.app/`
+- **Backend API**: `https://startup-evaluator-backend-166437193095.asia-south1.run.app/`
+- **API Documentation**: `https://startup-evaluator-backend-166437193095.asia-south1.run.app/docs`
+- **Health Check**: `https://startup-evaluator-backend-166437193095.asia-south1.run.app/health`
 
-## 🛠️ Management Commands
+## Management Commands
 
 ```bash
 # View logs
@@ -132,7 +121,7 @@ gcloud run services update startup-evaluator-backend \
     --max-instances=10
 ```
 
-## 🔒 Security
+## Security
 
 - **Environment Variables**: NO hardcoded values in backend code
 - **Service Account Authentication**: Least-privilege access patterns
@@ -140,7 +129,7 @@ gcloud run services update startup-evaluator-backend \
 - **Input Validation**: File type and size restrictions
 - **Error Handling**: Comprehensive logging and error recovery
 
-## 📈 Performance
+## Performance
 
 - **Serverless Scaling**: Auto-scaling Cloud Run instances
 - **Processing Time**: 1-2 minutes per document
@@ -148,7 +137,7 @@ gcloud run services update startup-evaluator-backend \
 - **Concurrent Users**: Up to 10 simultaneous evaluations
 - **Response Time**: <5 seconds for API calls
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create feature branch (`git checkout -b feature/AmazingFeature`)
@@ -156,11 +145,11 @@ gcloud run services update startup-evaluator-backend \
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Google Cloud Platform** for comprehensive AI/ML services
 - **Vertex AI Team** for Gemini integration and advanced AI capabilities
@@ -168,6 +157,6 @@ This project is licensed under the MIT License - see LICENSE file for details.
 
 ---
 
-**🚀 Built exclusively with Google Cloud Platform services**
+**Built exclusively with Google Cloud Platform services**
 
 For support and questions, please check the API documentation at `/docs` endpoint or review the deployment logs.
